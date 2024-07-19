@@ -2,7 +2,3 @@ seaborn
 matplotlib
 pandas
 streamlit
-streamlit-option-menu
-string
-random
-datetime
