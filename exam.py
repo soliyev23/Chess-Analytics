@@ -83,7 +83,7 @@ if selected == "Missing value":
     with st.expander("## ID column:"):
 
     # Id nan qiymatlar orniga yangi id 
-        st.write(f"Count of Nan: {df['id'].isna().sum()}")
+        # st.write(f"Count of Nan: {df['id'].isna().sum()}")
         st.write(df[df["id"].isna()].head(2))
 
         def generate_random_string(length=8):
