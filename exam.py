@@ -55,10 +55,10 @@ if selected == "DataFrame haqida":
     st.title("The End of game.")
     st.bar_chart(df.value_counts("victory_status",normalize=True)*100)
 
-    st.subheader('')
-    with st.expander("HERE WE GO -----> "):
-        st.write('Here we goooooo!')
-        st.image("https://i.pinimg.com/originals/35/88/dc/3588dc1b2b72593f202427ab529ef890.jpg")
+    # st.subheader('')
+    # with st.expander("HERE WE GO -----> "):
+    #     st.write('Here we goooooo!')
+    #     st.image("https://i.pinimg.com/originals/35/88/dc/3588dc1b2b72593f202427ab529ef890.jpg")
 
 
 
