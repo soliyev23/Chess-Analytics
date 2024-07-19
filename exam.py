@@ -56,7 +56,7 @@ if selected == "DataFrame haqida":
     st.bar_chart(df.value_counts("victory_status",normalize=True)*100)
 
     st.subheader('')
-    with st.expander("Meni bo'sing!"):
+    with st.expander("HERE WE GO -----> "):
         st.write('Here we goooooo!')
         st.image("https://i.pinimg.com/originals/35/88/dc/3588dc1b2b72593f202427ab529ef890.jpg")
 
@@ -99,8 +99,8 @@ if selected == "Missing value":
                 lines = file.readlines()
                 return ''.join(lines[start_line:end_line])
         file_path = 'exam.py'
-        start_line = 82
-        end_line = 89
+        start_line = 87
+        end_line = 94
 
         code_snippet = read_code(file_path, start_line, end_line)
 
@@ -117,7 +117,7 @@ if selected == "Missing value":
 
         df = df.drop_duplicates(subset="id")
 
-        st.code(read_code(file_path, 112,114),language="python")
+        st.code(read_code(file_path, 117,119),language="python")
 
         st.write(f"Dublicated:  {df.duplicated().sum()}")
 
@@ -150,7 +150,7 @@ if selected == "Missing value":
         df_3 = df_3.transform(lambda x: x.fillna(x.mean()))
         st.write(df_3.describe()-temp.describe())
 
-    st.code(read_code(file_path, 134,147),language="python")
+    st.code(read_code(file_path, 139,152),language="python")
 
 
     col1,col2 = st.columns(2)
@@ -195,7 +195,7 @@ if selected == "Missing value":
     df[obj_column] = df.groupby(by=["victory_status"])[obj_column].transform(lambda x: x.fillna(x.mode()[0]))
     df[obj_column] = df[obj_column].transform(lambda x: x.fillna(x.mode()[0]))
 
-    st.code(read_code(file_path, 187,190),language="python")
+    st.code(read_code(file_path, 194,197),language="python")
     st.subheader('')
     with st.expander("Amount of Nan"):
         st.write(df[obj_column].isna().sum())
@@ -205,7 +205,7 @@ if selected == "Missing value":
     df["rated"] = df.groupby(by=["victory_status"])["rated"].transform(lambda x: x.fillna(x.mode()[0]))
     df["rated"] = df["rated"].transform(lambda x: x.fillna(x.mode()[0]))
 
-    st.code(read_code(file_path, 199,202),language="python")
+    st.code(read_code(file_path, 204,207),language="python")
     
     with st.expander("Amount of Nan"):
         st.write(df.isna().sum())
