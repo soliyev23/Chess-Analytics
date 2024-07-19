@@ -107,7 +107,7 @@ if selected == "Missing value":
 
         st.code(code_snippet, language='python')
 
-        st.write(f"Count of Nan: {df["id"].isna().sum()}")
+        st.write(f"Count of Nan: {df['id'].isna().sum()}")
 
 
 
