@@ -6,7 +6,6 @@ import random
 from streamlit_option_menu import option_menu
 import matplotlib.pyplot as plt
 import seaborn as sns
-import plotly.express as px
 
 
 df = pd.read_csv("chess_dataset.csv")
