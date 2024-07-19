@@ -64,15 +64,10 @@ if selected == "DataFrame haqida":
 
 
 # Missin values
-if selected == "Missing value":
+elif selected == "Missing value":
     st.title("Bu yerda DataFrame ni clean qilamiz")
+    df = df.drop(columns="Unnamed: 0")
     st.dataframe(df)
-
-    if st.button('Delete Column'):
-        df = df.drop(columns="Unnamed: 0")
-        st.dataframe(df)
-    else:
-        df = df.drop(columns="Unnamed: 0")
 
     st.write("## Count of Nan")
 
@@ -213,7 +208,9 @@ if selected == "Missing value":
 
 
 # TAHLIL FRAFIKALAR
-if selected == "Grafik tahlil":
+elif selected == "Grafik tahlil":
+    df = df.drop(columns="Unnamed: 0")
+
     st.title('Chess Games Analysis')
 
     # Distribution of game results over time
