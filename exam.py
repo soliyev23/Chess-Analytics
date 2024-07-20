@@ -145,7 +145,7 @@ elif selected == "Missing value":
         df_3 = df_3.transform(lambda x: x.fillna(x.mean()))
         st.write(df_3.describe()-temp.describe())
 
-    st.code(read_code(file_path, 139,152),language="python")
+    st.code(read_code(file_path, 134,147),language="python")
 
 
     col1,col2 = st.columns(2)
@@ -190,7 +190,7 @@ elif selected == "Missing value":
     df[obj_column] = df.groupby(by=["victory_status"])[obj_column].transform(lambda x: x.fillna(x.mode()[0]))
     df[obj_column] = df[obj_column].transform(lambda x: x.fillna(x.mode()[0]))
 
-    st.code(read_code(file_path, 194,197),language="python")
+    st.code(read_code(file_path, 189,192),language="python")
     st.subheader('')
     with st.expander("Amount of Nan"):
         st.write(df[obj_column].isna().sum())
@@ -200,7 +200,7 @@ elif selected == "Missing value":
     df["rated"] = df.groupby(by=["victory_status"])["rated"].transform(lambda x: x.fillna(x.mode()[0]))
     df["rated"] = df["rated"].transform(lambda x: x.fillna(x.mode()[0]))
 
-    st.code(read_code(file_path, 204,207),language="python")
+    st.code(read_code(file_path, 199,202),language="python")
     
     with st.expander("Amount of Nan"):
         st.write(df.isna().sum())
