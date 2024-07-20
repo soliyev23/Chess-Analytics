@@ -94,8 +94,8 @@ elif selected == "Missing value":
                 lines = file.readlines()
                 return ''.join(lines[start_line:end_line])
         file_path = 'exam.py'
-        start_line = 87
-        end_line = 94
+        start_line = 82
+        end_line = 89
 
         code_snippet = read_code(file_path, start_line, end_line)
 
