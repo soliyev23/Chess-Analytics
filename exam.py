@@ -112,7 +112,7 @@ elif selected == "Missing value":
 
         df = df.drop_duplicates(subset="id")
 
-        st.code(read_code(file_path, 117,119),language="python")
+        st.code(read_code(file_path, 112,114),language="python")
 
         st.write(f"Dublicated:  {df.duplicated().sum()}")
 
