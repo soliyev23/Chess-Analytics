@@ -84,8 +84,8 @@ elif selected == "Missing value":
                 lines = file.readlines()
                 return ''.join(lines[start_line:end_line])
         file_path = 'exam.py'
-        start_line = 87
-        end_line = 94
+        start_line = 72
+        end_line = 79
 
         code_snippet = read_code(file_path, start_line, end_line)
 
@@ -102,7 +102,7 @@ elif selected == "Missing value":
 
         df = df.drop_duplicates(subset="id")
 
-        st.code(read_code(file_path, 117,119),language="python")
+        st.code(read_code(file_path, 102,104),language="python")
 
         st.write(f"Dublicated:  {df.duplicated().sum()}")
 
@@ -135,7 +135,7 @@ elif selected == "Missing value":
         df_3 = df_3.transform(lambda x: x.fillna(x.mean()))
         st.write(df_3.describe()-temp.describe())
 
-    st.code(read_code(file_path, 139,152),language="python")
+    st.code(read_code(file_path, 124,137),language="python")
 
 
     col1,col2 = st.columns(2)
@@ -180,7 +180,7 @@ elif selected == "Missing value":
     df[obj_column] = df.groupby(by=["victory_status"])[obj_column].transform(lambda x: x.fillna(x.mode()[0]))
     df[obj_column] = df[obj_column].transform(lambda x: x.fillna(x.mode()[0]))
 
-    st.code(read_code(file_path, 194,197),language="python")
+    st.code(read_code(file_path, 179,182),language="python")
     st.subheader('')
     with st.expander("Amount of Obj Nan"):
         st.write(df[obj_column].isna().sum())
@@ -190,7 +190,7 @@ elif selected == "Missing value":
     df["rated"] = df.groupby(by=["victory_status"])["rated"].transform(lambda x: x.fillna(x.mode()[0]))
     df["rated"] = df["rated"].transform(lambda x: x.fillna(x.mode()[0]))
 
-    st.code(read_code(file_path, 204,207),language="python")
+    st.code(read_code(file_path, 189,192),language="python")
     
     with st.expander("Amount of Nan"):
         st.write(df.isna().sum())
